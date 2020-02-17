@@ -70,6 +70,7 @@ public class PlayActivity extends AppCompatActivity implements View.OnClickListe
         buttons = new Button[]{btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8};
 
         //Make the buttons all communicate with this onClick method
+        //you should use this method for the inialization in 58-70
         for (int i = 0; i <= 8; i++) {
             buttons[i].setOnClickListener(this);
         }
@@ -85,6 +86,7 @@ public class PlayActivity extends AppCompatActivity implements View.OnClickListe
             greetingTxt.setText(savedInstanceState.getString("greeting")); //Restores the greeting text
             currPlayerText.setText(savedInstanceState.getString("currentPlayerText")); //Restores the current player text
             //Fixes the board state
+            //an array can be used instead. and this code is replaced by loops --r
             tictactoe.setMove(savedInstanceState.getInt("loc0"),0);
             tictactoe.setMove(savedInstanceState.getInt("loc1"),1);
             tictactoe.setMove(savedInstanceState.getInt("loc2"),2);
